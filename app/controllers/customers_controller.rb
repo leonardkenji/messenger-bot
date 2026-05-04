@@ -6,7 +6,14 @@ class CustomersController < ApplicationController
 
   def create
     @customer = Customer.new(customer_params)
+  end
 
+  def index
+    @customers = Customer.all
+  end
+
+  def show
+    @customer = Customer.find(params[:id])
   end
 
   private
