@@ -22,6 +22,13 @@ class MessengerController < ApplicationController
     conversation = customer.conversations.create
     conversation.messages.create(content: content, role: "user", message_type: "text")
 
-    render json: { status: "ok" }
+    ruby_llm = RubyLLM.chat
+    ruby_llm.with_instructions("responda de forma como voce fosse um atendete de uma loja de roupas fazendo o primeiro contato com o cliente")
+    response = ruby_llm.ask(content)
+
+    conversation.messages.create(content: response.content, role: "assistant", message_type: "text")
+    MessengerService.send_message(sender, response.content)
+
+    return render json: { status: "ok" } if content.blank?
   end
 end

@@ -71,3 +71,4 @@ end
 
 # custom
   gem "faraday"
+  gem "ruby_llm", "~> 1.2.0"

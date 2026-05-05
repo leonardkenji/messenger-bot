@@ -1,8 +1,4 @@
-<h1>Hello</h1>
-  <% customer = Customer.first %>
-  <% if customer %>
-    <p><%= customer.fb_sender_id %></p>
-    <p><%= customer.conversations.first&.messages&.first&.content %></p>
-  <% else %>
-    <p>Nenhum customer ainda</p>
-  <% end %>
+<div class = "container flex">
+  <h1>Hello</h1>
+  <%= link_to "Messages", messages_path %>
+</div>
