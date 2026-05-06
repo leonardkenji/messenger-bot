@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+@theme {
+  /* — Typography — */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body:    "Source Serif 4", Georgia, serif;
+  --font-mono:    "JetBrains Mono", monospace;
+
+  /* — Monochrome Palette — */
+  --color-ink:         #000000;
+  --color-paper:       #ffffff;
+  --color-muted:       #f5f5f5;
+  --color-muted-fg:    #525252;
+  --color-rule:        #e5e5e5;
+}
+
+/* Base */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Zero border-radius everywhere */
+*, *::before, *::after {
+  border-radius: 0 !important;
+}

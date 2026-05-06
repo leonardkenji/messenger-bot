@@ -1,0 +1,136 @@
+<div class="w-full">
+
+  <%# ─── Hero Header ──────────────────────────────────────────────── %>
+  <div class="pt-10 pb-8 flex items-end justify-between gap-8">
+    <h1 class="font-display font-black text-7xl lg:text-8xl xl:text-9xl tracking-tighter leading-none text-ink select-none">
+      Conversas
+    </h1>
+    <div class="text-right shrink-0 pb-2 hidden sm:block">
+      <p class="font-mono font-medium text-4xl lg:text-5xl leading-none text-ink">
+        <%= "%03d" % @conversations.count %>
+      </p>
+      <p class="font-mono text-xs tracking-widest uppercase text-muted-fg mt-2">total</p>
+    </div>
+  </div>
+
+  <%# ─── 4px Rule ─────────────────────────────────────────────────── %>
+  <div class="border-t-4 border-ink"></div>
+
+  <%# ─── Stats Strip ───────────────────────────────────────────────── %>
+  <div class="grid grid-cols-3 border-b border-ink bg-muted">
+    <div class="border-r border-ink px-6 py-5">
+      <p class="font-mono text-xs tracking-widest uppercase text-muted-fg">Conversas</p>
+      <p class="font-mono text-xl font-medium text-ink mt-1.5"><%= @conversations.count %></p>
+    </div>
+    <div class="border-r border-ink px-6 py-5">
+      <p class="font-mono text-xs tracking-widest uppercase text-muted-fg">Esta Semana</p>
+      <p class="font-mono text-xl font-medium text-ink mt-1.5">
+        <%= @conversations.where(created_at: 7.days.ago..).count %>
+      </p>
+    </div>
+    <div class="px-6 py-5">
+      <p class="font-mono text-xs tracking-widest uppercase text-muted-fg">Atualizado</p>
+      <p class="font-mono text-xl font-medium text-ink mt-1.5">
+        <%= Time.now.strftime("%d/%m/%y") %>
+      </p>
+    </div>
+  </div>
+
+  <%# ─── Empty State ───────────────────────────────────────────────── %>
+  <% if @conversations.empty? %>
+    <div class="border border-t-0 border-ink py-32 text-center">
+      <p class="font-display text-2xl italic text-muted-fg">Nenhuma conversa ainda.</p>
+    </div>
+
+  <%# ─── Table ─────────────────────────────────────────────────────── %>
+  <% else %>
+    <div class="border border-t-0 border-ink overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+
+        <thead>
+          <tr class="border-b border-ink bg-muted">
+            <th class="font-mono text-xs tracking-widest uppercase text-muted-fg font-medium text-left px-5 py-3 w-10">#</th>
+            <th class="font-mono text-xs tracking-widest uppercase text-muted-fg font-medium text-left px-5 py-3 w-40">Sender</th>
+            <th class="font-mono text-xs tracking-widest uppercase text-muted-fg font-medium text-left px-5 py-3 w-48">Assunto</th>
+            <th class="font-mono text-xs tracking-widest uppercase text-muted-fg font-medium text-left px-5 py-3">Resumo</th>
+            <th class="font-mono text-xs tracking-widest uppercase text-muted-fg font-medium text-left px-5 py-3 w-56">Última Mensagem</th>
+            <th class="font-mono text-xs tracking-widest uppercase text-muted-fg font-medium text-left px-5 py-3 w-24">Data</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @conversations.each_with_index do |conversation, i| %>
+            <% last_message = conversation.messages.last %>
+            <tr class="group border-b border-rule last:border-b-0 hover:bg-ink transition-colors duration-100 cursor-default">
+
+              <%# Index %>
+              <td class="px-5 py-4">
+                <span class="font-mono text-xs text-muted-fg group-hover:text-paper">
+                  <%= "%02d" % (i + 1) %>
+                </span>
+              </td>
+
+              <%# Sender ID %>
+              <td class="px-5 py-4">
+                <span class="font-mono text-xs text-ink group-hover:text-paper tracking-wide">
+                  ···<%= conversation.customer.fb_sender_id.to_s.last(8) %>
+                </span>
+              </td>
+
+              <%# Assunto %>
+              <td class="px-5 py-4">
+                <span class="font-display italic text-sm leading-snug text-ink group-hover:text-paper">
+                  <%= conversation.subject.presence || "—" %>
+                </span>
+              </td>
+
+              <%# Resumo %>
+              <td class="px-5 py-4 max-w-xs">
+                <p class="font-body text-xs text-muted-fg group-hover:text-paper leading-relaxed line-clamp-2">
+                  <%= conversation.summary.presence || "—" %>
+                </p>
+              </td>
+
+              <%# Última mensagem %>
+              <td class="px-5 py-4 max-w-xs">
+                <% if last_message %>
+                  <% is_user = last_message.role == 'user' %>
+                  <% badge_cls = is_user ? 'border-ink text-ink group-hover:border-paper group-hover:text-paper' : 'bg-ink text-paper border-ink group-hover:bg-paper group-hover:text-ink group-hover:border-paper' %>
+                  <div class="flex items-start gap-2">
+                    <span class="font-mono text-xs px-1.5 py-0.5 leading-tight shrink-0 border <%= badge_cls %>">
+                      <%= is_user ? 'CLI' : 'BOT' %>
+                    </span>
+                    <span class="font-body text-xs text-muted-fg group-hover:text-paper leading-relaxed line-clamp-2">
+                      <%= last_message.content %>
+                    </span>
+                  </div>
+                <% else %>
+                  <span class="text-muted-fg">—</span>
+                <% end %>
+              </td>
+
+              <%# Data %>
+              <td class="px-5 py-4 whitespace-nowrap">
+                <span class="font-mono text-xs text-ink group-hover:text-paper block leading-none">
+                  <%= conversation.updated_at.strftime("%d/%m/%y") %>
+                </span>
+                <span class="font-mono text-xs text-muted-fg group-hover:text-paper block leading-none mt-1">
+                  <%= conversation.updated_at.strftime("%H:%M") %>
+                </span>
+              </td>
+
+            </tr>
+          <% end %>
+        </tbody>
+
+      </table>
+    </div>
+  <% end %>
+
+  <%# ─── Footer ────────────────────────────────────────────────────── %>
+  <div class="mt-16 pt-4 border-t-4 border-ink flex items-center justify-between">
+    <span class="font-mono text-xs tracking-widest uppercase text-muted-fg">Messenger Bot</span>
+    <span class="font-mono text-xs text-muted-fg"><%= Time.now.strftime("%d/%m/%Y %H:%M") %></span>
+  </div>
+
+</div>

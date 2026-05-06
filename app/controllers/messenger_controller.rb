@@ -209,6 +209,7 @@ class MessengerController < ApplicationController
     #creates a message with the role assistant in this conversation
     conversation.messages.create(content: response.content, role: "assistant", message_type: "text")
     #calls the service to send the content of the LLM message as payload to the Messenger via HTTP request
+    sleep 5
     MessengerService.send_message(sender, response.content)
 
     render json: { status: "ok" }
