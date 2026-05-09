@@ -16,6 +16,12 @@
   <%# ─── 4px Rule ─────────────────────────────────────────────────── %>
   <div class="border-t-4 border-ink"></div>
 
+  <%# ─── Scrape Button  ─────────────────────────────────────────────────── %>
+
+  <div>
+    <%= button_to "Scrape", dashboard_scrape_path, method: :post, class: "font-mono text-xs px-1.5 py-0.5 leading-tight shrink-0 border bg-ink text-paper border-ink group-hover:bg-paper group-hover:text-ink group-hover:border-paper" %>
+  </div>
+
   <%# ─── Stats Strip ───────────────────────────────────────────────── %>
   <div class="grid grid-cols-3 border-b border-ink bg-muted">
     <div class="border-r border-ink px-6 py-5">

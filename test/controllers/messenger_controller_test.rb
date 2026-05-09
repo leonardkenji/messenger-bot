@@ -1,13 +1,13 @@
 require "test_helper"
 
 class MessengerControllerTest < ActionDispatch::IntegrationTest
-  test "should get verify" do
-    get messenger_verify_url
-    assert_response :success
+  test "should return forbidden when verify token is missing" do
+    get webhook_url
+    assert_response :forbidden
   end
 
-  test "should get receive" do
-    get messenger_receive_url
+  test "should return ok when receive has no content" do
+    post webhook_url
     assert_response :success
   end
 end

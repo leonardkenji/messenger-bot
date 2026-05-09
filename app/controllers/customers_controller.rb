@@ -1,5 +1,4 @@
 class CustomersController < ApplicationController
-
   def new
     @customer = Customer.new
   end
@@ -21,5 +20,4 @@ class CustomersController < ApplicationController
   def customer_params
     params.require(:customer).permit(:fb_sender_id)
   end
-
 end

@@ -1,8 +1,6 @@
 class MessagesController < ApplicationController
-
   def index
     @messages = Message.all
-
   end
 
   def new
@@ -15,7 +13,6 @@ class MessagesController < ApplicationController
     @message.conversation = @conversation
     @message.role = "user"
     @message.save
-
   end
 
   def show
@@ -25,7 +22,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content, :role)
+    params.require(:message).permit(:content)
   end
-
 end

@@ -1,0 +1,722 @@
+[
+  {
+    "name": "AQUA1,5G",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003350",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003350_1&w=3840&q=75",
+    "price": "Valor Total¥Ask",
+    "km": "60,468km",
+    "shaken": "2027/01"
+  },
+  {
+    "name": "Vellfire2.5 Z Edição A",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003341",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003341_1&w=3840&q=75",
+    "price": "Valor Total¥3,362,680",
+    "km": "62,522km",
+    "shaken": "2027/04"
+  },
+  {
+    "name": "Vezel Híbrido1.5 eHEV PLaY",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003329",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003329_1&w=3840&q=75",
+    "price": "Valor Total¥3,436,950",
+    "km": "47,660km",
+    "shaken": "2027/02"
+  },
+  {
+    "name": "Sienta1.5 HÍBRIDO G Aero",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003340",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003340_1&w=3840&q=75",
+    "price": "Valor Total¥2,047,650",
+    "km": "64,920km",
+    "shaken": "2027/03"
+  },
+  {
+    "name": "Spacia CustomHÍBRIDO XS Turbo",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003328",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003328_1&w=3840&q=75",
+    "price": "Valor Total¥1,602,700",
+    "km": "50,021km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "ROOXH Star G Turbo Propilot Ed",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003327",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003327_1&w=3840&q=75",
+    "price": "Valor Total¥1,543,300",
+    "km": "37,285km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "EXTRA1,5 G e-4ORCE",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003342",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003342_1&w=3840&q=75",
+    "price": "Valor Total¥3,406,641",
+    "km": "55,171km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "ROOXH Star G Turbo Propilot Ed",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003326",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003326_1&w=3840&q=75",
+    "price": "Valor Total¥1,777,600",
+    "km": "3,060km",
+    "shaken": "2027/09"
+  },
+  {
+    "name": "NX Híbrido300h F SPORT Aero",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003332",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003332_1&w=3840&q=75",
+    "price": "Valor Total¥3,219,303",
+    "km": "68,098km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "EK CROSSEdição G Plus",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003335",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003335_1&w=3840&q=75",
+    "price": "Valor Total¥1,360,304",
+    "km": "36,570km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Corolla Cross1.8 HÍBRIDO Z",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003175",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003175_1&w=3840&q=75",
+    "price": "Valor Total¥3,356,800",
+    "km": "32,984km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Vezel Híbrido1.5 eHEV PLaY",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003324",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003324_1&w=3840&q=75",
+    "price": "Valor Total¥3,324,610",
+    "km": "27,928km",
+    "shaken": "2027/05"
+  },
+  {
+    "name": "Voxy1.8ZS Kirameki II Híbrido",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003334",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003334_1&w=3840&q=75",
+    "price": "Valor Total¥2,648,484",
+    "km": "46,274km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Chutes1.2 e-POW X Dois Tons",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003308",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003308_1&w=3840&q=75",
+    "price": "Valor Total¥1,996,500",
+    "km": "38,788km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Sienta1.5 HÍBRIDO G 7 pessoas",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003313",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003313_1&w=3840&q=75",
+    "price": "Valor Total¥2,001,450",
+    "km": "64,296km",
+    "shaken": "2027/03"
+  },
+  {
+    "name": "Voxy1.8ZS Híbrido",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003314",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003314_1&w=3840&q=75",
+    "price": "Valor Total¥2,705,450",
+    "km": "61,424km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Híbrido ZR-V2.0 eHEV Z",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003317",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003317_1&w=3840&q=75",
+    "price": "Valor Total¥3,142,700",
+    "km": "59,095km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Vezel Híbrido1.5 eHEV Z",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003318",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003318_1&w=3840&q=75",
+    "price": "Valor Total¥2,698,140",
+    "km": "56,230km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "HijetCarga Deluxe Teto Alto",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003311",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003311_1&w=3840&q=75",
+    "price": "Valor Total¥Ask",
+    "km": "85,550km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Stepwgn Spada2.0 Z",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003306",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003306_1&w=3840&q=75",
+    "price": "Valor Total¥1,039,787",
+    "km": "80,549km",
+    "shaken": "2027/01"
+  },
+  {
+    "name": "Vellfire2.5 Z 7 lugares",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003298",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003298_1&w=3840&q=75",
+    "price": "Valor Total¥2,311,260",
+    "km": "91,240km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Vezel Híbrido1.5 eHEV Z Aero",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003310",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003310_1&w=3840&q=75",
+    "price": "Valor Total¥2,803,900",
+    "km": "58,003km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "RAV42.5 HÍBRIDO X 2WD",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003185",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003185_1&w=3840&q=75",
+    "price": "Valor Total¥3,275,776",
+    "km": "24,000km",
+    "shaken": "2027/05"
+  },
+  {
+    "name": "Premácia20E 7 lugares",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003231",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003231_1&w=3840&q=75",
+    "price": "Valor Total¥580,716",
+    "km": "55,493km",
+    "shaken": "2027/08"
+  },
+  {
+    "name": "Fronx1.5 Teto bicolor",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003305",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003305_1&w=3840&q=75",
+    "price": "Valor Total¥2,642,068",
+    "km": "3,529km",
+    "shaken": "2028/07"
+  },
+  {
+    "name": "C-HRHV 1.8 G Modellista",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003289",
+    "image": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg_no-image.d53db103.webp&w=3840&q=75",
+    "price": "Valor Total¥1,999,940",
+    "km": "64,770km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Voxy1.8ZS Kiramei II Híbrido",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003293",
+    "image": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg_no-image.d53db103.webp&w=3840&q=75",
+    "price": "Valor Total¥2,968,350",
+    "km": "65,900km",
+    "shaken": "2027/05"
+  },
+  {
+    "name": "Alphard2.5SApkg PRETO 7 lugares",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003291",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003291_1&w=3840&q=75",
+    "price": "Valor Total¥3,254,640",
+    "km": "45,654km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Noah1.8Si Híbrido",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003290",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003290_1&w=3840&q=75",
+    "price": "Valor Total¥2,739,090",
+    "km": "68,900km",
+    "shaken": "2026/09"
+  },
+  {
+    "name": "PRIUS1.8S Touring Selection",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003274",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003274_1&w=3840&q=75",
+    "price": "Valor Total¥1,734,700",
+    "km": "52,986km",
+    "shaken": "2027/01"
+  },
+  {
+    "name": "AQUA1,5G",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003350",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003350_1&w=3840&q=75",
+    "price": "Valor Total¥Ask",
+    "km": "60,468km",
+    "shaken": "2027/01"
+  },
+  {
+    "name": "Vellfire2.5 Z Edição A",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003341",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003341_1&w=3840&q=75",
+    "price": "Valor Total¥3,362,680",
+    "km": "62,522km",
+    "shaken": "2027/04"
+  },
+  {
+    "name": "Vezel Híbrido1.5 eHEV PLaY",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003329",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003329_1&w=3840&q=75",
+    "price": "Valor Total¥3,436,950",
+    "km": "47,660km",
+    "shaken": "2027/02"
+  },
+  {
+    "name": "Sienta1.5 HÍBRIDO G Aero",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003340",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003340_1&w=3840&q=75",
+    "price": "Valor Total¥2,047,650",
+    "km": "64,920km",
+    "shaken": "2027/03"
+  },
+  {
+    "name": "Spacia CustomHÍBRIDO XS Turbo",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003328",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003328_1&w=3840&q=75",
+    "price": "Valor Total¥1,602,700",
+    "km": "50,021km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "ROOXH Star G Turbo Propilot Ed",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003327",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003327_1&w=3840&q=75",
+    "price": "Valor Total¥1,543,300",
+    "km": "37,285km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "EXTRA1,5 G e-4ORCE",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003342",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003342_1&w=3840&q=75",
+    "price": "Valor Total¥3,406,641",
+    "km": "55,171km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "ROOXH Star G Turbo Propilot Ed",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003326",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003326_1&w=3840&q=75",
+    "price": "Valor Total¥1,777,600",
+    "km": "3,060km",
+    "shaken": "2027/09"
+  },
+  {
+    "name": "NX Híbrido300h F SPORT Aero",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003332",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003332_1&w=3840&q=75",
+    "price": "Valor Total¥3,219,303",
+    "km": "68,098km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "EK CROSSEdição G Plus",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003335",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003335_1&w=3840&q=75",
+    "price": "Valor Total¥1,360,304",
+    "km": "36,570km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Corolla Cross1.8 HÍBRIDO Z",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003175",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003175_1&w=3840&q=75",
+    "price": "Valor Total¥3,356,800",
+    "km": "32,984km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Vezel Híbrido1.5 eHEV PLaY",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003324",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003324_1&w=3840&q=75",
+    "price": "Valor Total¥3,324,610",
+    "km": "27,928km",
+    "shaken": "2027/05"
+  },
+  {
+    "name": "Voxy1.8ZS Kirameki II Híbrido",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003334",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003334_1&w=3840&q=75",
+    "price": "Valor Total¥2,648,484",
+    "km": "46,274km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Chutes1.2 e-POW X Dois Tons",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003308",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003308_1&w=3840&q=75",
+    "price": "Valor Total¥1,996,500",
+    "km": "38,788km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Sienta1.5 HÍBRIDO G 7 pessoas",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003313",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003313_1&w=3840&q=75",
+    "price": "Valor Total¥2,001,450",
+    "km": "64,296km",
+    "shaken": "2027/03"
+  },
+  {
+    "name": "Voxy1.8ZS Híbrido",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003314",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003314_1&w=3840&q=75",
+    "price": "Valor Total¥2,705,450",
+    "km": "61,424km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Híbrido ZR-V2.0 eHEV Z",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003317",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003317_1&w=3840&q=75",
+    "price": "Valor Total¥3,142,700",
+    "km": "59,095km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Vezel Híbrido1.5 eHEV Z",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003318",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003318_1&w=3840&q=75",
+    "price": "Valor Total¥2,698,140",
+    "km": "56,230km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "HijetCarga Deluxe Teto Alto",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003311",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003311_1&w=3840&q=75",
+    "price": "Valor Total¥Ask",
+    "km": "85,550km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Stepwgn Spada2.0 Z",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003306",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003306_1&w=3840&q=75",
+    "price": "Valor Total¥1,039,787",
+    "km": "80,549km",
+    "shaken": "2027/01"
+  },
+  {
+    "name": "Vellfire2.5 Z 7 lugares",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003298",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003298_1&w=3840&q=75",
+    "price": "Valor Total¥2,311,260",
+    "km": "91,240km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Vezel Híbrido1.5 eHEV Z Aero",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003310",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003310_1&w=3840&q=75",
+    "price": "Valor Total¥2,803,900",
+    "km": "58,003km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "RAV42.5 HÍBRIDO X 2WD",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003185",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003185_1&w=3840&q=75",
+    "price": "Valor Total¥3,275,776",
+    "km": "24,000km",
+    "shaken": "2027/05"
+  },
+  {
+    "name": "Premácia20E 7 lugares",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003231",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003231_1&w=3840&q=75",
+    "price": "Valor Total¥580,716",
+    "km": "55,493km",
+    "shaken": "2027/08"
+  },
+  {
+    "name": "Fronx1.5 Teto bicolor",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003305",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003305_1&w=3840&q=75",
+    "price": "Valor Total¥2,642,068",
+    "km": "3,529km",
+    "shaken": "2028/07"
+  },
+  {
+    "name": "C-HRHV 1.8 G Modellista",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003289",
+    "image": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg_no-image.d53db103.webp&w=3840&q=75",
+    "price": "Valor Total¥1,999,940",
+    "km": "64,770km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Voxy1.8ZS Kiramei II Híbrido",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003293",
+    "image": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg_no-image.d53db103.webp&w=3840&q=75",
+    "price": "Valor Total¥2,968,350",
+    "km": "65,900km",
+    "shaken": "2027/05"
+  },
+  {
+    "name": "Alphard2.5SApkg PRETO 7 lugares",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003291",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003291_1&w=3840&q=75",
+    "price": "Valor Total¥3,254,640",
+    "km": "45,654km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Noah1.8Si Híbrido",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003290",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003290_1&w=3840&q=75",
+    "price": "Valor Total¥2,739,090",
+    "km": "68,900km",
+    "shaken": "2026/09"
+  },
+  {
+    "name": "PRIUS1.8S Touring Selection",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003274",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003274_1&w=3840&q=75",
+    "price": "Valor Total¥1,734,700",
+    "km": "52,986km",
+    "shaken": "2027/01"
+  },
+  {
+    "name": "Wagon RHV FZ",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003280",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003280_1&w=3840&q=75",
+    "price": "Valor Total¥1,212,200",
+    "km": "53,090km",
+    "shaken": "2027/09"
+  },
+  {
+    "name": "Freed HÍBRIDO1.5 HÍBRIDO G 6 pessoas",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003273",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003273_1&w=3840&q=75",
+    "price": "Valor Total¥2,117,450",
+    "km": "39,001km",
+    "shaken": "2027/10"
+  },
+  {
+    "name": "Voxy1.8ZS Híbrido",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003254",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003254_1&w=3840&q=75",
+    "price": "Valor Total¥2,789,600",
+    "km": "61,312km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "C-HRHV 1.8 G Modellista",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003253",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003253_1&w=3840&q=75",
+    "price": "Valor Total¥2,148,300",
+    "km": "56,811km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Harrier2.0 ELEGÂNCIA",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003252",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003252_1&w=3840&q=75",
+    "price": "Valor Total¥2,345,100",
+    "km": "54,226km",
+    "shaken": "2027/11"
+  },
+  {
+    "name": "HarrierPREMIUM Modelo recente",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003244",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003244_1&w=3840&q=75",
+    "price": "Valor Total¥2,441,970",
+    "km": "55,670km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "DayZHighway Star X",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003214",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003214_1&w=3840&q=75",
+    "price": "Valor Total¥1,297,450",
+    "km": "41,765km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "DayZHighway Star X",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003238",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003238_1&w=3840&q=75",
+    "price": "Valor Total¥1,269,950",
+    "km": "43,662km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "NX Híbrido300h F Sport",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003226",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003226_1&w=3840&q=75",
+    "price": "Valor Total¥3,200,450",
+    "km": "45,275km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "RAV42.5 HÍBRIDO G 4WD",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003180",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003180_1&w=3840&q=75",
+    "price": "Valor Total¥3,498,550",
+    "km": "64,800km",
+    "shaken": "2027/03"
+  },
+  {
+    "name": "N BOX CustomG・L Turbo SENSING 2 Tons",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003222",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003222_1&w=3840&q=75",
+    "price": "Valor Total¥1,506,323",
+    "km": "59,539km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "EK CROSSG",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003223",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003223_1&w=3840&q=75",
+    "price": "Valor Total¥1,397,965",
+    "km": "27,889km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "DayZHighway Star X",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003213",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003213_1&w=3840&q=75",
+    "price": "Valor Total¥1,425,050",
+    "km": "7,626km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "NoahHíbrido 1.8G",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003189",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003189_1&w=3840&q=75",
+    "price": "Valor Total¥2,082,960",
+    "km": "64,300km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "FIT HybridPacote 1.5 HÍBRIDO S",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003190",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003190_1&w=3840&q=75",
+    "price": "Valor Total¥1,297,789",
+    "km": "58,443km",
+    "shaken": "2027/03"
+  },
+  {
+    "name": "FIT Hybrid1.5 HÍBRIDO L",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003209",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003209_1&w=3840&q=75",
+    "price": "Valor Total¥1,279,734",
+    "km": "62,800km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "RAV42.5 HÍBRIDO G 4WD",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003211",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003211_1&w=3840&q=75",
+    "price": "Valor Total¥3,482,773",
+    "km": "66,600km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Chutes1.2 e-POW X",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003188",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003188_1&w=3840&q=75",
+    "price": "Valor Total¥2,024,480",
+    "km": "34,900km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Vellfire2.5 Z 8 lugares modelo recente",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003184",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003184_1&w=3840&q=75",
+    "price": "Valor Total¥3,287,350",
+    "km": "62,950km",
+    "shaken": "2027/03"
+  },
+  {
+    "name": "Freed HÍBRIDO1.5 HÍBRIDO G 6 pessoas",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003192",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003192_1&w=3840&q=75",
+    "price": "Valor Total¥1,870,150",
+    "km": "63,850km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "VoxyHíbrido 1,8 V",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003156",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003156_1&w=3840&q=75",
+    "price": "Valor Total¥2,139,610",
+    "km": "65,700km",
+    "shaken": "2026/11"
+  },
+  {
+    "name": "Spacia CustomHÍBRIDO XS Turbo",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003154",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003154_1&w=3840&q=75",
+    "price": "Valor Total¥1,522,510",
+    "km": "61,718km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "CX-82.2 XD PROACTIVE 7 pessoas",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003153",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003153_1&w=3840&q=75",
+    "price": "Valor Total¥2,384,610",
+    "km": "66,800km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Vezel Híbrido1.5 HÍBRIDO RS",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003152",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003152_1&w=3840&q=75",
+    "price": "Valor Total¥1,955,140",
+    "km": "66,500km",
+    "shaken": "2026/09"
+  },
+  {
+    "name": "C-HREdição LED HV 1.8 G",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003114",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003114_1&w=3840&q=75",
+    "price": "Valor Total¥2,551,907",
+    "km": "61,650km",
+    "shaken": "2027/02"
+  },
+  {
+    "name": "ek Espaço CruzadoT",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003145",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003145_1&w=3840&q=75",
+    "price": "Valor Total¥1,534,320",
+    "km": "50,500km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "ek Espaço CruzadoT",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003143",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003143_1&w=3840&q=75",
+    "price": "Valor Total¥1,546,600",
+    "km": "49,800km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "Cada vagãoPZ Turbo SP Teto padrão",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003130",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003130_1&w=3840&q=75",
+    "price": "Valor Total¥1,478,208",
+    "km": "47,900km",
+    "shaken": "2026/09"
+  },
+  {
+    "name": "Harrier2.0 PREMIUM",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003138",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003138_1&w=3840&q=75",
+    "price": "Valor Total¥2,274,250",
+    "km": "64,500km",
+    "shaken": "Inspeção com manutenção"
+  },
+  {
+    "name": "N BOX CustomG･EXT SENSING 2 Tons",
+    "url": "https://www.easycarride.com/pt/stock-list/detail?id=CH0000003072",
+    "image": "/_next/image?url=%2Fapi%2Fstock%2Fget-image%3Fkey%3DCH0000003072_1&w=3840&q=75",
+    "price": "Valor Total¥1,614,250",
+    "km": "53,600km",
+    "shaken": "2026/07"
+  }
+]

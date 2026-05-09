@@ -1,4 +1,9 @@
+require "json"
+
 class MessengerController < ApplicationController
+
+  cars = JSON.parse(File.read(Rails.root.join("app/assets/data/cars.json")))
+
   SYSTEM_PROMPT = <<-PROMPT
     Identifique-se como assistente virtual e que vai auxiliar no primeiro atendimento. Peça para o cliente selecionar uma das opções
 
@@ -10,6 +15,8 @@ class MessengerController < ApplicationController
     6- Quero falar com um atendente
 
     Enviar este menu apenas uma vez.
+
+    lista de carros do estoque atual, veja esta lista quando o usuario quiser saber se tem algum carro. Tambem caso for oferecer algum carro como exemplo. Use apenas carros dessa lista #{cars.to_json}
 
     Se a reposta for 1: se a pessoa perguntar sobre um carro em específico: enviar o link https://www.easycarride.com/stock-list
     Se o cliente perguntar sobre preço, pedir para entrar no site indicado. Se perguntar sobre financiamento, seguir para o passo 2.
@@ -164,10 +171,10 @@ class MessengerController < ApplicationController
 
   PROMPT
 
-  #allows Facebook POST request to come to the program
+  # allows Facebook POST request to come to the program
   skip_before_action :verify_authenticity_token
 
-  #Facebook checking if th webhook is working properly, checking the token and the params value
+  # Facebook checking if th webhook is working properly, checking the token and the params value
   def verify
     if params["hub.verify_token"] == ENV["FACEBOOK_VERIFY_TOKEN"]
       render plain: params["hub.challenge"]
@@ -176,40 +183,41 @@ class MessengerController < ApplicationController
     end
   end
 
-  #if the verify is ok this method will GET the Json with the information from the Facebook Messenger interaction like user ID and Message content. I use this information
-  #to create a new Instance of Customer and then Conversation and Message
+  # if the verify is ok this method will GET the Json with the information from the Facebook Messenger interaction like user ID and Message content. I use this information
+  # to create a new Instance of Customer and then Conversation and Message
   def receive
     # get the hash with the necessary information
-    messenger = params[:entry][0]&.dig(:messaging, 0)
-    #get the sender ID
-    sender = messenger&.dig(:sender,:id)
-    #get the content of the message
+    messenger = params[:entry]&.first&.dig(:messaging, 0)
+    # get the sender ID
+    sender = messenger&.dig(:sender, :id)
+    # get the content of the message
     content = messenger&.dig(:message, :text)
-    #does not crash if there is no message yet
+    # ignore echo events (bot's own sent messages) and empty content
+    return render json: { status: "ok" } if messenger&.dig(:message, :is_echo)
     return render json: { status: "ok" } if content.blank?
 
-    #create an instance of a Customer or finds it
+    # create an instance of a Customer or finds it
     customer = Customer.find_or_create_by(fb_sender_id: sender)
-    #gets the last conversation of create a new one
+    # gets the last conversation of create a new one
     conversation = customer.conversations.last || customer.conversations.create
-    #saves the message in the DB
-    conversation.messages.create(content: content, role: "user", message_type: "text")
+    # saves the message in the DB
+    user_message = conversation.messages.create(content: content, role: "user", message_type: "text")
 
-    #starts the LLM Gem
+    # starts the LLM Gem
     ruby_llm = RubyLLM.chat
-    #iterates over all of the messages in that conversation to give context to the LLM response
-    conversation.messages.each do |message|
+    # loads previous messages as context (excluding the current one, which ask() will add)
+    conversation.messages.where.not(id: user_message.id).order(:created_at).each do |message|
       ruby_llm.add_message(role: message.role, content: message.content)
     end
-    #loads the PROMPT
+    # loads the PROMPT
     ruby_llm.with_instructions(SYSTEM_PROMPT)
-    #ask the llm the message received from the the FB Messenger
+    # ask the llm the message received from the the FB Messenger
     response = ruby_llm.ask(content)
 
-    #creates a message with the role assistant in this conversation
+    # creates a message with the role assistant in this conversation
     conversation.messages.create(content: response.content, role: "assistant", message_type: "text")
-    #calls the service to send the content of the LLM message as payload to the Messenger via HTTP request
-    sleep 5
+    # calls the service to send the content of the LLM message as payload to the Messenger via HTTP request
+    sleep 2
     MessengerService.send_message(sender, response.content)
 
     render json: { status: "ok" }

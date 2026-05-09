@@ -1,5 +1,4 @@
 class ConversationsController < ApplicationController
-
   def new
   end
 
@@ -10,5 +9,4 @@ class ConversationsController < ApplicationController
 
   def conversation_params
   end
-
 end
