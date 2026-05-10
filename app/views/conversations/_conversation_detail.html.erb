@@ -1,0 +1,134 @@
+<div class="p-8 min-h-full">
+
+  <%# ── Header ─────────────────────────────────────────────────────────── %>
+  <div class="flex items-start justify-between gap-6 mb-8 pb-6 border-b border-zinc-800">
+    <div class="min-w-0">
+      <div class="flex items-center gap-3 mb-1.5 flex-wrap">
+        <h2 class="font-display font-bold text-2xl text-zinc-100">
+          <%= conversation.customer.display_name %>
+        </h2>
+        <% if conversation.active? %>
+          <span id="<%= dom_id(conversation, :status_badge) %>"
+                class="font-mono text-xs px-2 py-1 bg-emerald-500/15 text-emerald-400 border border-emerald-500/25">
+            対応中
+          </span>
+        <% else %>
+          <span id="<%= dom_id(conversation, :status_badge) %>"
+                class="font-mono text-xs px-2 py-1 bg-zinc-700/40 text-zinc-400 border border-zinc-700/60">
+            完了
+          </span>
+        <% end %>
+      </div>
+      <p class="font-mono text-xs text-zinc-600">
+        <%= conversation.messages.size %> 件のメッセージ
+        · ID <%= conversation.customer.fb_sender_id %>
+        · 更新 <%= conversation.updated_at.strftime("%Y年%m月%d日 %H:%M") %>
+      </p>
+    </div>
+
+    <div class="shrink-0 flex items-center gap-2">
+      <%# Auto-reply toggle %>
+      <%= button_to toggle_auto_reply_conversation_path(conversation), method: :patch,
+          title: conversation.customer.auto_reply? ? "BOT有効 — 停止するにはクリック" : "BOT停止 — 有効にするにはクリック",
+          class: "flex items-center gap-1.5 font-mono text-xs px-3 py-2 border transition-colors " +
+                 (conversation.customer.auto_reply? ?
+                   "border-emerald-600/40 text-emerald-400 hover:border-red-500/50 hover:text-red-400" :
+                   "border-zinc-700 text-zinc-600 hover:border-emerald-600/40 hover:text-emerald-400") do %>
+        <span class="inline-block w-1.5 h-1.5 rounded-full <%= conversation.customer.auto_reply? ? 'bg-emerald-400 animate-pulse' : 'bg-zinc-600' %>"></span>
+        <%= conversation.customer.auto_reply? ? "Bot ON" : "Bot OFF" %>
+      <% end %>
+
+      <%# Status toggle %>
+      <%= button_to toggle_status_conversation_path(conversation), method: :patch,
+          class: "font-mono text-xs px-3 py-2 border transition-colors " +
+                 (conversation.active? ?
+                   "border-zinc-600 text-zinc-400 hover:border-red-500/50 hover:text-red-400" :
+                   "border-zinc-600 text-zinc-400 hover:border-emerald-500/50 hover:text-emerald-400") do %>
+        <%= conversation.active? ? "完了にする" : "再開する" %>
+      <% end %>
+    </div>
+  </div>
+
+  <%# ── Summary Card ───────────────────────────────────────────────────── %>
+  <% if conversation.summary.present? %>
+    <div class="mb-7 p-5 bg-zinc-900 border border-zinc-800">
+      <h3 class="font-mono text-xs tracking-widest uppercase text-zinc-600 mb-3">会話の要約</h3>
+      <% if conversation.subject.present? %>
+        <p class="font-display italic text-lg text-zinc-200 mb-3 leading-snug">
+          <%= conversation.subject %>
+        </p>
+      <% end %>
+      <p class="font-body text-sm text-zinc-300 leading-relaxed">
+        <%= conversation.summary %>
+      </p>
+    </div>
+  <% end %>
+
+  <%# ── Manager Notes ──────────────────────────────────────────────────── %>
+  <div class="mb-7">
+    <h3 class="font-mono text-xs tracking-widest uppercase text-zinc-600 mb-3">マネージャーメモ</h3>
+
+    <%# Stacked notes list — each note is self-contained, container is plain %>
+    <div id="conversation_notes_list_<%= conversation.id %>" class="flex flex-col gap-2 mb-4">
+      <% conversation.conversation_notes.order(created_at: :desc).each do |note| %>
+        <%= render "conversation_notes/conversation_note", conversation_note: note %>
+      <% end %>
+    </div>
+
+    <%# Input form %>
+    <%= render "conversation_notes/form", conversation: conversation %>
+  </div>
+
+  <%# ── Negotiation Advice ─────────────────────────────────────────────── %>
+  <% if conversation.advice_list.any? %>
+    <div class="mb-8">
+      <h3 class="font-mono text-xs tracking-widest uppercase text-zinc-600 mb-4">営業アドバイス</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <% conversation.advice_list.each_with_index do |tip, i| %>
+          <div class="flex items-start gap-3 px-4 py-3.5 bg-blue-950/40 border border-blue-800/30 hover:border-blue-700/40 transition-colors">
+            <span class="font-mono text-xs text-blue-600/70 shrink-0 mt-0.5 select-none">
+              <%= "%02d" % (i + 1) %>
+            </span>
+            <p class="font-body text-sm text-blue-200/80 leading-relaxed">
+              <%= tip %>
+            </p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+  <%# ── Message History ────────────────────────────────────────────────── %>
+  <div>
+    <h3 class="font-mono text-xs tracking-widest uppercase text-zinc-600 mb-5">メッセージ履歴</h3>
+
+    <% if conversation.messages.empty? %>
+      <p class="font-body text-sm text-zinc-600 italic">メッセージはまだありません。</p>
+    <% else %>
+      <div class="space-y-4">
+        <% conversation.messages.order(:created_at).each do |message| %>
+          <% is_user = message.role == "user" %>
+          <div class="flex <%= is_user ? "justify-start" : "justify-end" %>">
+            <div class="max-w-[72%]">
+              <div class="flex items-center gap-2 mb-1.5 <%= is_user ? "" : "justify-end" %>">
+                <span class="font-mono text-xs <%= is_user ? "text-zinc-500" : "text-indigo-400/70" %>">
+                  <%= is_user ? "顧客" : "BOT" %>
+                </span>
+                <span class="font-mono text-xs text-zinc-700">
+                  <%= message.created_at.strftime("%m/%d %H:%M") %>
+                </span>
+              </div>
+              <div class="px-4 py-3 text-sm font-body leading-relaxed
+                          <%= is_user ?
+                            "bg-zinc-800 text-zinc-200 border border-zinc-700/60" :
+                            "bg-indigo-950/60 text-indigo-100/90 border border-indigo-800/30" %>">
+                <%= message.translated_content.presence || message.content %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+</div>

@@ -1,0 +1,17 @@
+<div id="conversation_note_form_<%= conversation.id %>">
+  <%= form_with model: ConversationNote.new,
+        url: conversation_notes_path(conversation),
+        data: { turbo_frame: "_top" } do |f| %>
+    <%= f.text_area :content,
+          placeholder: "メモを追加…",
+          rows: 3,
+          class: "w-full bg-zinc-900 border border-zinc-700 focus:border-amber-500/60 focus:outline-none
+                  text-zinc-200 placeholder-zinc-700 text-sm font-body leading-relaxed px-4 py-3
+                  resize-none transition-colors" %>
+    <div class="flex justify-end mt-2">
+      <%= f.submit "メモを保存",
+            class: "font-mono text-xs px-4 py-2 border border-zinc-700 text-zinc-400
+                    hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-pointer" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,11 @@
+<%# Update the sidebar conversation item %>
+<%= turbo_stream.replace dom_id(@conversation) do %>
+  <%= render "conversations/conversation_item", conversation: @conversation %>
+<% end %>
+
+<%# Replace the full right panel with updated content %>
+<%= turbo_stream.replace "conversation_panel" do %>
+  <%= turbo_frame_tag "conversation_panel", class: "block h-full overflow-y-auto" do %>
+    <%= render "conversations/conversation_detail", conversation: @conversation %>
+  <% end %>
+<% end %>

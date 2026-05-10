@@ -2,9 +2,9 @@
 
 @theme {
   /* — Typography — */
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body:    "Source Serif 4", Georgia, serif;
-  --font-mono:    "JetBrains Mono", monospace;
+  --font-display: "Roboto", sans-serif;
+  --font-body:    "Roboto", sans-serif;
+  --font-mono:    "Roboto Mono", monospace;
 
   /* — Monochrome Palette — */
   --color-ink:         #000000;

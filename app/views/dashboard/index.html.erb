@@ -1,142 +1,85 @@
-<div class="w-full">
+<%# Dark professional theme overrides %>
+<% content_for :body_class, "bg-zinc-950 text-zinc-100" %>
+<% content_for :nav_class, "border-b border-zinc-800 bg-zinc-900" %>
+<% content_for :nav_logo_class, "font-display italic font-bold text-lg tracking-tight text-zinc-100" %>
+<% content_for :nav_label_class, "font-mono text-xs tracking-widest uppercase text-zinc-500" %>
+<% content_for :main_class, "h-[calc(100vh-57px)] overflow-hidden p-0" %>
 
-  <%# ─── Hero Header ──────────────────────────────────────────────── %>
-  <div class="pt-10 pb-8 flex items-end justify-between gap-8">
-    <h1 class="font-display font-black text-7xl lg:text-8xl xl:text-9xl tracking-tighter leading-none text-ink select-none">
-      Conversas
-    </h1>
-    <div class="text-right shrink-0 pb-2 hidden sm:block">
-      <p class="font-mono font-medium text-4xl lg:text-5xl leading-none text-ink">
-        <%= "%03d" % @conversations.count %>
-      </p>
-      <p class="font-mono text-xs tracking-widest uppercase text-muted-fg mt-2">total</p>
-    </div>
-  </div>
+<div class="flex h-full"
+     data-controller="conversation-select search">
 
-  <%# ─── 4px Rule ─────────────────────────────────────────────────── %>
-  <div class="border-t-4 border-ink"></div>
+  <%# ═══════════════════════════════════════════════════════ SIDEBAR %>
+  <aside class="w-[340px] xl:w-[380px] shrink-0 flex flex-col bg-zinc-900 border-r border-zinc-800 overflow-hidden">
 
-  <%# ─── Scrape Button  ─────────────────────────────────────────────────── %>
-
-  <div>
-    <%= button_to "Scrape", dashboard_scrape_path, method: :post, class: "font-mono text-xs px-1.5 py-0.5 leading-tight shrink-0 border bg-ink text-paper border-ink group-hover:bg-paper group-hover:text-ink group-hover:border-paper" %>
-  </div>
-
-  <%# ─── Stats Strip ───────────────────────────────────────────────── %>
-  <div class="grid grid-cols-3 border-b border-ink bg-muted">
-    <div class="border-r border-ink px-6 py-5">
-      <p class="font-mono text-xs tracking-widest uppercase text-muted-fg">Conversas</p>
-      <p class="font-mono text-xl font-medium text-ink mt-1.5"><%= @conversations.count %></p>
-    </div>
-    <div class="border-r border-ink px-6 py-5">
-      <p class="font-mono text-xs tracking-widest uppercase text-muted-fg">Esta Semana</p>
-      <p class="font-mono text-xl font-medium text-ink mt-1.5">
-        <%= @conversations.where(created_at: 7.days.ago..).count %>
-      </p>
-    </div>
-    <div class="px-6 py-5">
-      <p class="font-mono text-xs tracking-widest uppercase text-muted-fg">Atualizado</p>
-      <p class="font-mono text-xl font-medium text-ink mt-1.5">
-        <%= Time.now.strftime("%d/%m/%y") %>
-      </p>
-    </div>
-  </div>
-
-  <%# ─── Empty State ───────────────────────────────────────────────── %>
-  <% if @conversations.empty? %>
-    <div class="border border-t-0 border-ink py-32 text-center">
-      <p class="font-display text-2xl italic text-muted-fg">Nenhuma conversa ainda.</p>
+    <%# Sidebar header %>
+    <div class="px-5 py-4 border-b border-zinc-800 shrink-0">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="font-display font-bold text-lg text-zinc-100">会話一覧</h2>
+        <div class="flex items-center gap-2">
+          <span class="font-mono text-xs text-zinc-500 bg-zinc-800 border border-zinc-700 px-2 py-0.5">
+            <%= @conversations.count %>
+          </span>
+          <%= button_to "更新", dashboard_scrape_path, method: :post,
+              class: "font-mono text-xs text-zinc-600 hover:text-zinc-300 border border-zinc-700 hover:border-zinc-500 px-2 py-0.5 transition-colors" %>
+        </div>
+      </div>
+      <input type="search"
+             placeholder="会話を検索…"
+             data-search-target="input"
+             data-action="input->search#filter"
+             class="w-full bg-zinc-800 border border-zinc-700 focus:border-zinc-500 focus:outline-none
+                    text-zinc-200 placeholder-zinc-600 text-xs font-mono px-3 py-2 transition-colors">
     </div>
 
-  <%# ─── Table ─────────────────────────────────────────────────────── %>
-  <% else %>
-    <div class="border border-t-0 border-ink overflow-x-auto">
-      <table class="w-full text-sm border-collapse">
-
-        <thead>
-          <tr class="border-b border-ink bg-muted">
-            <th class="font-mono text-xs tracking-widest uppercase text-muted-fg font-medium text-left px-5 py-3 w-10">#</th>
-            <th class="font-mono text-xs tracking-widest uppercase text-muted-fg font-medium text-left px-5 py-3 w-40">Sender</th>
-            <th class="font-mono text-xs tracking-widest uppercase text-muted-fg font-medium text-left px-5 py-3 w-48">Assunto</th>
-            <th class="font-mono text-xs tracking-widest uppercase text-muted-fg font-medium text-left px-5 py-3">Resumo</th>
-            <th class="font-mono text-xs tracking-widest uppercase text-muted-fg font-medium text-left px-5 py-3 w-56">Última Mensagem</th>
-            <th class="font-mono text-xs tracking-widest uppercase text-muted-fg font-medium text-left px-5 py-3 w-24">Data</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @conversations.each_with_index do |conversation, i| %>
-            <% last_message = conversation.messages.last %>
-            <tr class="group border-b border-rule last:border-b-0 hover:bg-ink transition-colors duration-100 cursor-default">
-
-              <%# Index %>
-              <td class="px-5 py-4">
-                <span class="font-mono text-xs text-muted-fg group-hover:text-paper">
-                  <%= "%02d" % (i + 1) %>
-                </span>
-              </td>
-
-              <%# Sender ID %>
-              <td class="px-5 py-4">
-                <span class="font-mono text-xs text-ink group-hover:text-paper tracking-wide">
-                  ···<%= conversation.customer.fb_sender_id.to_s.last(8) %>
-                </span>
-              </td>
-
-              <%# Assunto %>
-              <td class="px-5 py-4">
-                <span class="font-display italic text-sm leading-snug text-ink group-hover:text-paper">
-                  <%= conversation.subject.presence || "—" %>
-                </span>
-              </td>
-
-              <%# Resumo %>
-              <td class="px-5 py-4 max-w-xs">
-                <p class="font-body text-xs text-muted-fg group-hover:text-paper leading-relaxed line-clamp-2">
-                  <%= conversation.summary.presence || "—" %>
-                </p>
-              </td>
-
-              <%# Última mensagem %>
-              <td class="px-5 py-4 max-w-xs">
-                <% if last_message %>
-                  <% is_user = last_message.role == 'user' %>
-                  <% badge_cls = is_user ? 'border-ink text-ink group-hover:border-paper group-hover:text-paper' : 'bg-ink text-paper border-ink group-hover:bg-paper group-hover:text-ink group-hover:border-paper' %>
-                  <div class="flex items-start gap-2">
-                    <span class="font-mono text-xs px-1.5 py-0.5 leading-tight shrink-0 border <%= badge_cls %>">
-                      <%= is_user ? 'CLI' : 'BOT' %>
-                    </span>
-                    <span class="font-body text-xs text-muted-fg group-hover:text-paper leading-relaxed line-clamp-2">
-                      <%= last_message.content %>
-                    </span>
-                  </div>
-                <% else %>
-                  <span class="text-muted-fg">—</span>
-                <% end %>
-              </td>
-
-              <%# Data %>
-              <td class="px-5 py-4 whitespace-nowrap">
-                <span class="font-mono text-xs text-ink group-hover:text-paper block leading-none">
-                  <%= conversation.updated_at.strftime("%d/%m/%y") %>
-                </span>
-                <span class="font-mono text-xs text-muted-fg group-hover:text-paper block leading-none mt-1">
-                  <%= conversation.updated_at.strftime("%H:%M") %>
-                </span>
-              </td>
-
-            </tr>
-          <% end %>
-        </tbody>
-
-      </table>
+    <%# Stats strip %>
+    <div class="grid grid-cols-3 border-b border-zinc-800 shrink-0">
+      <div class="px-4 py-2.5 border-r border-zinc-800 text-center">
+        <p class="font-mono text-xs text-emerald-400"><%= @conversations.count { |c| c.active? } %></p>
+        <p class="font-mono text-xs text-zinc-600 uppercase tracking-wider mt-0.5">対応中</p>
+      </div>
+      <div class="px-4 py-2.5 border-r border-zinc-800 text-center">
+        <p class="font-mono text-xs text-zinc-400"><%= @conversations.count { |c| !c.active? } %></p>
+        <p class="font-mono text-xs text-zinc-600 uppercase tracking-wider mt-0.5">完了</p>
+      </div>
+      <div class="px-4 py-2.5 text-center">
+        <p class="font-mono text-xs text-zinc-400"><%= @conversations.select { |c| c.created_at >= 7.days.ago }.count %></p>
+        <p class="font-mono text-xs text-zinc-600 uppercase tracking-wider mt-0.5">今週</p>
+      </div>
     </div>
-  <% end %>
 
-  <%# ─── Footer ────────────────────────────────────────────────────── %>
-  <div class="mt-16 pt-4 border-t-4 border-ink flex items-center justify-between">
-    <span class="font-mono text-xs tracking-widest uppercase text-muted-fg">Messenger Bot</span>
-    <span class="font-mono text-xs text-muted-fg"><%= Time.now.strftime("%d/%m/%Y %H:%M") %></span>
+    <%# Conversation list %>
+    <div class="overflow-y-auto flex-1 scrollbar-thin">
+      <% if @conversations.empty? %>
+        <div class="px-5 py-16 text-center">
+          <p class="font-body text-sm text-zinc-600 italic">会話がまだありません。</p>
+        </div>
+      <% else %>
+        <% @conversations.each do |conversation| %>
+          <%= render "conversations/conversation_item", conversation: conversation %>
+        <% end %>
+      <% end %>
+    </div>
+
+  </aside>
+
+  <%# ═══════════════════════════════════════════════════════ MAIN PANEL %>
+  <div class="flex-1 overflow-hidden bg-zinc-950">
+    <%= turbo_frame_tag "conversation_panel", class: "block h-full overflow-y-auto" do %>
+      <%# Empty state %>
+      <div class="h-full flex items-center justify-center">
+        <div class="text-center px-8 max-w-sm">
+          <div class="text-zinc-800 mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl text-zinc-600 mb-2">会話を選択してください</h3>
+          <p class="font-body text-sm text-zinc-700 leading-relaxed">
+            左のサイドバーから会話を選択すると、要約・営業アドバイス・メッセージ履歴が表示されます。
+          </p>
+        </div>
+      </div>
+    <% end %>
   </div>
 
 </div>

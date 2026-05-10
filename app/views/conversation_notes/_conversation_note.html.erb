@@ -1,0 +1,13 @@
+<div class="flex gap-3 bg-amber-950/20 border border-amber-900/30 px-4 py-3">
+  <div class="shrink-0 mt-0.5">
+    <div class="w-6 h-6 bg-amber-500/20 border border-amber-500/30 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0">
+    <p class="font-body text-sm text-amber-100/80 leading-relaxed"><%= conversation_note.content %></p>
+    <p class="font-mono text-xs text-amber-700/60 mt-1.5"><%= conversation_note.created_at.strftime("%Y年%m月%d日 %H:%M") %></p>
+  </div>
+</div>
