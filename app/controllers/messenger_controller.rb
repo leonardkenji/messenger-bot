@@ -443,7 +443,7 @@ Sempre finalize conduzindo para análise:
     MessengerService.send_message(sender, response.content)
 
     # regenerate dashboard insights in background so they reflect the new exchange
-    GenerateInsightsJob.perform_later(conversation.id)
+    GenerateInsightsJob.perform_later(conversation.id) rescue nil
 
     render json: { status: "ok" }
   end
