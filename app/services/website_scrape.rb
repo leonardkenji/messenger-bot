@@ -43,18 +43,29 @@ class WebsiteScrape
     all_cards = []
 
     loop do
-      Watir::Wait.until(timeout: 30) { browser.div(class: "stockList_carCard__sFMSE").exists? }
+      Watir::Wait.until(timeout: 30) { browser.element(css: '[class*="stockList_carCard"]').exists? }
+      sleep 1
+
       html = browser.execute_script("return document.documentElement.outerHTML;")
-      doc = Nokogiri::HTML(html)
-      all_cards += doc.css(".stockList_carCard__sFMSE").to_a
+      doc  = Nokogiri::HTML(html)
+      cards = doc.css('[class*="stockList_carCard"]').to_a
+      all_cards += cards
 
       next_btn = browser.button(class: /p-paginator-next/)
       break if next_btn.disabled?
 
+      first_link = doc.at_css('[class*="stockList_carCard"] a')&.attr("href")
       next_btn.click
+
+      Watir::Wait.until(timeout: 30) do
+        new_html = browser.execute_script("return document.documentElement.outerHTML;")
+        new_doc  = Nokogiri::HTML(new_html)
+        new_link = new_doc.at_css('[class*="stockList_carCard"] a')&.attr("href")
+        new_link.present? && new_link != first_link
+      end
     end
 
-    cars = all_cards.map { |card| parse_card(card) }
+    cars = all_cards.uniq { |card| card.at_css("a")&.attr("href") }.map { |card| parse_card(card) }
     File.write(Rails.root.join("app/assets/data/cars.json"), JSON.pretty_generate(cars))
     cars
   ensure
