@@ -5,7 +5,7 @@ require "json"
 
 class WebsiteScrape
   BASE_URL = "https://www.easycarride.com"
-  URL = "#{BASE_URL}/pt/stock-list"
+  URL = "#{BASE_URL}/en/stock-list"
 
   CHROME_ARGS = [
     "--headless=new",
@@ -66,8 +66,8 @@ class WebsiteScrape
       url:    path ? "#{BASE_URL}#{path}" : nil,
       image:  card.at_css("img")&.attr("src"),
       price:  card.at_css('[class*="stockList_price"]')&.text&.strip,
-      km:     card.xpath('.//p[contains(text(),"Quilometragem")]/following-sibling::p[1]').text.strip,
-      shaken: card.xpath('.//p[contains(text(),"Inspeção Veicular")]/following-sibling::p[1]').text.strip
+      km:     card.xpath('.//p[contains(text(),"Mileage")]/following-sibling::p[1]').text.strip,
+      shaken: card.xpath('.//p[contains(text(),"Inspection")]/following-sibling::p[1]').text.strip
     }
   end
 end
