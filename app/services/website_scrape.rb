@@ -31,7 +31,12 @@ class WebsiteScrape
 
   def call
     Selenium::WebDriver::Chrome::Service.driver_path = `which chromedriver`.strip
-    browser = Watir::Browser.new(:chrome, options: { args: CHROME_ARGS })
+
+    chrome_options = Selenium::WebDriver::Chrome::Options.new(args: CHROME_ARGS)
+    chrome_binary = `which google-chrome 2>/dev/null || which chromium-browser 2>/dev/null || which chromium 2>/dev/null`.strip
+    chrome_options.binary = chrome_binary if chrome_binary.present?
+
+    browser = Watir::Browser.new(:chrome, options: chrome_options)
 
     browser.goto(URL)
 
