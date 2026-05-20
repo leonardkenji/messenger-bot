@@ -5,7 +5,7 @@ class Conversation < ApplicationRecord
 
   STATUSES = %w[active finished].freeze
 
-  CARS = JSON.parse(File.read(Rails.root.join("app/assets/data/cars.json"))).freeze
+  CARS = JSON.parse(File.read(Rails.root.join("app/assets/data/cars.json")))
 
   def active?
     status == "active"
